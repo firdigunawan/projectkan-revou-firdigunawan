@@ -1,6 +1,6 @@
 const menuIcon = document.getElementById("menu-icon");
 const menuList = document.getElementById("menu-list");
-var video = document.getElementById("myVideo");
+
 // Mendapatkan referensi ke elemen <nav>
 let nav = document.querySelector("nav");
 
@@ -70,11 +70,3 @@ function hitungTotallabuanbajo() {
   //totalHarga.toLocaleString('id-ID'); digunakan untuk mengubah nilai totalHarga menjadi format string dengan pemisah ribuan dan menggunakan tanda desimal sesuai dengan konvensi bahasa Indonesia ('id-ID').
   document.getElementById('totalHarga-labuanbajo').innerText = totalHarga.toLocaleString('id-ID');
 }
-
-// Memainkan video secara otomatis saat halaman dimuat
-document.addEventListener("DOMContentLoaded", function() {
-  video.play().catch(function(error) {
-    // Penanganan kesalahan (misalnya, jika peramban memblokir pemutaran otomatis)
-    console.error("Autoplay blocked:", error);
-  });
-});
