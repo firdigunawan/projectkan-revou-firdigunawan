@@ -1,5 +1,6 @@
 const menuIcon = document.getElementById("menu-icon");
 const menuList = document.getElementById("menu-list");
+var video = document.getElementById("myVideo");
 // Mendapatkan referensi ke elemen <nav>
 let nav = document.querySelector("nav");
 
@@ -70,3 +71,10 @@ function hitungTotallabuanbajo() {
   document.getElementById('totalHarga-labuanbajo').innerText = totalHarga.toLocaleString('id-ID');
 }
 
+// Memainkan video secara otomatis saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function() {
+  video.play().catch(function(error) {
+    // Penanganan kesalahan (misalnya, jika peramban memblokir pemutaran otomatis)
+    console.error("Autoplay blocked:", error);
+  });
+});
